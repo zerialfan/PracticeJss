@@ -1,0 +1,38 @@
+*{
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid white;
+    height: 100vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 40vw;
+    outline: 1px solid white;
+}
+.form-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+form input,button{
+    background-color: white;
+    height: 25px;
+    margin: 6px;
+}
+form p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
