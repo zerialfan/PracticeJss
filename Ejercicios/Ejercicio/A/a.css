@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.main-container h1, p {
+    text-align: center;
+}
+.main-container p{
+    font-size: 2rem;
+}
+.main-container h1{
+    font-size: 4.2rem;
+}
