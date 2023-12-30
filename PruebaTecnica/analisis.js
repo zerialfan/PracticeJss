@@ -1,6 +1,10 @@
-console.log(salarios)
-const searchPerson = 'juanita'
+function findNameKey(personaBuscada) {
+    const foundPerson = salarios.find((foundPerson)=>{
+        return foundPerson.name === personaBuscada;
+    })
+    return foundPerson
+}
 
-const salaryPerson = salarios.find((salaryPerson)=>{
-    return salaryPerson.name == searchPerson
-})
+function encontrarPersona(personaEnBusqueda) {
+    return salarios.find(persona => persona.name === personaEnBusqueda)
+}
