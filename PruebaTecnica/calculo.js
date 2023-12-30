@@ -1,38 +1,39 @@
-const arr = [1,2,3,4,10]
-const newArray = arr.sort((a,b)=> a -b)
+const PlatziMath = {};
 
 
-function calcularPromedio(arr) {
+PlatziMath.calcularPromedio = function calcularPromedio(arr) {
   const suma = arr.reduce((acc, valor) => acc + valor, 0);
   return suma / arr.length;
-}
+};
 
-function calcularMediana(arr) {
+PlatziMath.calcularMediana = function calcularMediana(arr) {
   const n = arr.length;
+  const newArray = arr.slice().sort((a, b) => a - b); // Crear una copia ordenada del array original
+
   if (n % 2 === 0) {
     const c1 = n / 2 - 1;
     const c2 = n / 2;
-    return (arr[c1] + arr[c2]) / 2;
+    return (newArray[c1] + newArray[c2]) / 2;
   } else {
     const p = Math.floor(n / 2);
-    return arr[p];
+    return newArray[p];
   }
-}
+};
 
-function calcularModa(newArray) {
-  let frecuencia = newArray.reduce((count, value) => {
+PlatziMath.calcularModa = function calcularModa(arr) {
+  let frecuencia = arr.reduce((count, value) => {
     count[value] = (count[value] || 0) + 1;
     return count;
   }, {});
 
   let moda = [];
-  let maxFrecuency = 0;
+  let maxFrecuencia = 0;
 
   for (const key in frecuencia) {
-    if (frecuencia[key] > maxFrecuency) {
+    if (frecuencia[key] > maxFrecuencia) {
       moda = [parseInt(key, 10)];
-      maxFrecuency = frecuencia[key];
-    } else if (frecuencia[key] === maxFrecuency) {
+      maxFrecuencia = frecuencia[key];
+    } else if (frecuencia[key] === maxFrecuencia) {
       moda.push(parseInt(key, 10));
     }
   }
@@ -40,9 +41,4 @@ function calcularModa(newArray) {
     return "no hay moda";
   }
   return moda;
-}
-
-const resultado = calcularPromedio(newArray);
-const resultadoMediana = calcularMediana(newArray);
-const resultadoModa = calcularModa(newArray);
-console.log(resultadoMediana, resultado, resultadoModa);
+};
