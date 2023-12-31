@@ -42,3 +42,9 @@ PlatziMath.calcularModa = function calcularModa(arr) {
   }
   return moda;
 };
+
+// PlatziMath.calcularSalario = function calcularSalario(arr) {
+// Salario futuro = promedio del salario actual x (1 + tasa de crecimiento)^Años
+//     const promedio = PlatziMath.calcularPromedio(arr)
+//     const crecimiento =  newArray[0]
+// }
